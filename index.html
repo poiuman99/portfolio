@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mathijs De Langhe | Portfolio</title>
+<meta name="description" content="Portfolio of Mathijs De Langhe: school, work and scouts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">MDL</a>
+    <div class="nav-links">
+      <a href="#traject">Journey</a>
+      <a href="#projecten">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" aria-label="Switch between light and dark theme">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <h1>Mathijs De Langhe</h1>
+      <p>Student, employee and scout leader. I'm sociable and I love making things, from camp games to websites, and I learn quickly.</p>
+    </div>
+
+    <!-- Click a line: the timeline filters on that category -->
+    <div class="code" aria-label="Summary as a JavaScript object">
+      <div class="code-bar"><i></i><i></i><i></i><span>mathijs.js</span></div>
+<pre><code><span class="k">const</span> mathijs = {
+  name: <span class="s">"Mathijs De Langhe"</span>,
+  <a href="#traject" data-f="school">education: <span class="s">"Interactive Media Development"</span>,</a>
+  <a href="#traject" data-f="werk">work: <span class="s">"Student job in hospitality"</span>,</a>
+  <a href="#traject" data-f="scouts">scouts: <span class="s">"Head Leader"</span>,</a>
+  languages: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>],
+  available: <span class="k">true</span><span class="caret"></span>
+};</code></pre>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="traject">
+    <h2>My journey</h2>
+    <p class="lead">School, work and scouts on one line. Scroll to follow the path, or filter.</p>
+    <div class="tabs" role="group" aria-label="Filter">
+      <button aria-pressed="true" data-f="all">All</button>
+      <button aria-pressed="false" data-f="school">School</button>
+      <button aria-pressed="false" data-f="werk">Work</button>
+      <button aria-pressed="false" data-f="scouts">Scouts</button>
+    </div>
+
+    <ol class="trail" id="trail">
+      <li class="item" data-cat="school">
+        <span class="tag">School</span>
+        <h3>Economics and Modern Languages</h3>
+        <div class="when">Vrij Katholiek Onderwijs &middot; 2018 – 2024</div>
+        <p>Economics and Modern Languages -> I didn't yet know which sector I wanted to go into, and this was what interested me most at the time.</p>
+        <p>Subjects I was good at:</p>
+        <ul><li>Mathematics</li><li>Economics</li><li>Physics</li></ul>
+      </li>
+      <li class="item" data-cat="school">
+        <span class="tag">School</span>
+        <h3>Interactive Media Development</h3>
+        <div class="when">Artevelde University of Applied Sciences &middot; 2024 – now</div>
+        <p>Interactive Media Development -> I chose this programme because computers have always fascinated me.</p>
+        <p>Project or final work you're proud of:</p>
+        <ul><li>Project or final work you're proud of</li><li>Subject you're good at</li></ul>
+      </li>
+      <li class="item" data-cat="werk">
+        <span class="tag">Work</span>
+        <h3>Assistant at a Tent Rental Company</h3>
+        <div class="when">Tent En Event &middot; 2020 – 2025</div>
+        <p>Together with my boss (the two of us), I set up and took down party tents at customers' homes. On top of that, we maintained the quality of the tents.</p>
+        <p>What skills do I learn here?</p>
+        <ul><li>Working under time pressure</li><li>Being friendly towards my boss and the customers</li><li>Knowing what it's like to work long days</li></ul>
+      </li>
+      <li class="item" data-cat="werk">
+        <span class="tag">Work</span>
+        <h3>Café Employee</h3>
+        <div class="when">Café Leireken &middot; 2022 – now</div>
+        <p>Keeping a café open for the customers, usually with one colleague but sometimes alone.</p>
+        <p>What skills do I learn here?</p>
+        <ul><li>Seeing what needs doing, since there is usually nobody telling me what to do</li><li>Being friendly towards my boss and the customers</li><li>Being able to do several things at once</li></ul>
+      </li>
+      <li class="item" data-cat="werk">
+        <span class="tag">Work</span>
+        <h3>Fries Shop Employee</h3>
+        <div class="when">Frituur Leireken &middot; 2022 – now</div>
+        <p>Preparing orders and handling payment with the customers. Helping to fry the fries and meat snacks.</p>
+        <p>What skills do I learn here?</p>
+        <ul><li>Working accurately</li><li>Being friendly towards my boss and the customers</li><li>Being flexible thanks to the variety of tasks I get</li></ul>
+      </li>
+      <li class="item" data-cat="werk">
+        <span class="tag">Work</span>
+        <h3>Restaurant Employee</h3>
+        <div class="when">Alice &middot; 2023 – now</div>
+        <p>Working behind the bar or on the floor. Behind the bar I prepare the drinks (soft drinks, beer, coffee and cocktails). On the floor I take and pass on orders, serve them, clear tables and handle payment.</p>
+        <p>What skills do I learn here?</p>
+        <ul><li>Being accurate with orders</li><li>Being friendly towards my boss and the customers</li><li>Being flexible thanks to the variety of tasks I get</li></ul>
+      </li>
+      <li class="item" data-cat="werk">
+        <span class="tag">Work</span>
+        <h3>Youth Centre Board Member</h3>
+        <div class="when">Jeugdhuis Ifigineia &middot; 2024 – 2025</div>
+        <p>Keeping the youth centre open and running.</p>
+        <p>What were my tasks?</p>
+        <ul><li>Keeping the youth centre open on weekends</li><li>Maintaining the youth centre</li><li>Organising events</li></ul>
+      </li>
+      <li class="item" data-cat="scouts">
+        <span class="tag">Scouts</span>
+        <h3>Head Leader</h3>
+        <div class="when">Scouts Juventa Merchtem &middot; 2026 – now</div>
+        <p>I'm the person in charge of the scouts group and I guide the other leaders. My main task as head leader is administration.</p>
+        <p>Leaders in the leadership team -> 26</p>
+        <p>What exactly do I do as head leader?</p>
+        <ul><li>Staying in contact with the municipality and Scouts &amp; Gidsen Vlaanderen</li><li>Being the point of contact for parents when they have questions</li><li>Making sure our scouts group runs smoothly</li></ul>
+      </li>
+      <li class="item" data-cat="scouts">
+        <span class="tag">Scouts</span>
+        <h3>3rd Year as Leader</h3>
+        <div class="when">Scouts Juventa Merchtem &middot; 2023 – now</div>
+        <p>I've been a leader for 3 years now. Over the past years I've worked with these age groups:</p>
+        <ul><li>1st year as leader: Wolfjes (Cubs, 8-10 years)</li><li>2nd year as leader: Akabe (members with a disability, 6-21 years)</li><li>3rd year as leader: Bevers (10-12 years)</li></ul>
+        <p>What skills do I learn here?</p>
+        <ul><li>Working together with my co-leaders</li><li>Being responsible for the members</li><li>Thinking creatively to come up with fun games</li></ul>
+      </li>
+      <li class="item" data-cat="scouts">
+        <span class="tag">Scouts</span>
+        <h3>Events Organising Committee</h3>
+        <div class="when">Scouts Juventa Merchtem &middot; 2023 – now</div>
+        <p>Helping to organise the events together with a small group of leaders.</p>
+        <p>What does this involve?</p>
+        <ul><li>Meeting regularly to discuss the events</li><li>Arranging everything to put on a great event</li><li>Being responsible at the event itself and guiding the other leaders</li></ul>
+      </li>
+      <li class="item" data-cat="scouts">
+        <span class="tag">Scouts</span>
+        <h3>Totem</h3>
+        <div class="when">Scouts Juventa Merchtem &middot; 2020 – now</div>
+        <p>The totem I received from my fellow leaders is "Bonvivante Bee". A totem says something about a person's personality.</p>
+        <p>Traits of the Bee:</p>
+        <p><i>The bee is a social insect. This species works hard, is always busy and has a clear division of tasks. The bee picks things up quickly by observing its elders and learns by doing. Bees are altruistic: whatever they do is always aimed at the well-being of others. A bee is future-oriented.</i></p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="projecten">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <img class="card-img" src="img/speed/speed-challenge-1.png" alt="" loading="lazy">
+  <h3><button class="card-open">Speed Challenge</button></h3>
+  <p>An interactive running installation with two pillars, a timer, a high score and a printed ticket.</p>
+  <p class="stack-tags"><span>Raspberry Pi</span><span>ESP32-C3</span><span>C++</span><span>Python</span></p>
+
+  <!-- Only visible in the popup -->
+  <div class="detail" hidden>
+    <p class="stack-tags"><span>Raspberry Pi</span><span>ESP32-C3</span><span>C++</span><span>Python</span><span>Socket.IO</span></p>
+
+    <div class="gallery">
+  <figure>
+    <img src="img/speed/speed-challenge-1.png" alt="The Speed Challenge start and finish pillars placed side by side" loading="lazy">
+    <figcaption>The start and finish pillars</figcaption>
+  </figure>
+  </div>
+
+    <h4>The assignment</h4>
+    <p>Together with two other students, I explored how a complete experience loop works and what matters when designing an interactive installation. Our goal was to design and build a prototype that covers every stage of that loop: attract, entry, engage, exit and extend.</p>
+
+    <h4>The concept</h4>
+    <p>We created the Speed Challenge, an interactive running experience built around two physical pillars that can be placed in different environments. One pillar is the start and the other is the finish. Each has a physical button: players start the challenge at the first pillar and stop the timer at the second, as fast as they can.</p>
+    <p>At the finish pillar, players see their final time and compare it with the current high score. This competitive element invites them to try again and beat their own result. A screen and sound feedback make the experience feel responsive and engaging.</p>
+
+    <h4>Extending the experience</h4>
+    <p>To take the experience beyond the installation itself, we built a ticket printer into the finish pillar. It prints a physical ticket with the player's final time and a fun fact about athletics, giving them something tangible to take home.</p>
+
+    <h4>How it's built</h4>
+    <ul>
+      <li>A Raspberry Pi and two ESP32-C3 controllers</li>
+      <li>Arcade buttons, a timer, an LCD screen and a piezo speaker</li>
+      <li>A ticket printer inside the finish pillar</li>
+      <li>C++ and Python, with Socket.IO handling real-time communication between the components</li>
+    </ul>
+
+    <h4>What I learned</h4>
+    <p>This project showed me how important the complete experience loop is. Instead of focusing only on the interaction itself, we designed the whole experience: attracting people, getting them started, keeping them engaged, giving a clear ending, and offering a reason to remember it afterwards.</p>
+
+  </div>
+</article>
+      <article class="card">
+        <img class="card-img" src="img/kina/wintercircus-1-camouflagekaart.png" alt="" loading="lazy">
+        <h3><button class="card-open">Kina Ghent - Camouflagekaart</button></h3>
+        <p>An interactive IoT installation that teaches children about animals through a physical world map and a digital camouflage quiz.</p>
+        <p class="stack-tags"><span>Raspberry Pi</span><span>Arduino</span><span>MakeyMakey</span><span>Python</span><span>Flask</span><span>JavaScript</span><span>Socket.IO</span><span>Hardware</span><span>Electronics</span><span>Case development</span></p>
+        <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
+
+        <!-- Only visible in the popup -->
+        <div class="detail" hidden>
+          <p class="stack-tags"><span>Raspberry Pi</span><span>Arduino</span><span>MakeyMakey</span><span>Python</span><span>Flask</span><span>JavaScript</span><span>Socket.IO</span><span>Hardware</span><span>Electronics</span><span>Case development</span></p>
+          <figure>
+          <img src="img/kina/wintercircus-1-camouflagekaart.png" alt="A picture of the camouflagekaart in the Wintercircus" loading="lazy">
+          <figcaption>The installation</figcaption>
+          </figure>
+          <h4>The assignment</h4>
+          <p>Together with three other students, I created an interactive IoT installation inspired by Kina, the natural history museum in Ghent. Our goal was to design an engaging way for children to learn more about the animals and subjects featured in the museum.</p>
+
+          <h4>The concept</h4>
+          <p>We combined a physical world map with a digital quiz shown on a screen. Players first search an image for a camouflaged animal and then answer a multiple-choice question to identify what they found. By selecting different continents on the physical installation, they can discover animals from different parts of the world.</p>
+
+          <h4>How it's built</h4>
+          <p>A Raspberry Pi runs the application and communicates with an Arduino that controls the LED strips and physical buttons. A MakeyMakey enables joystick navigation and continent selection. The LEDs provide visual feedback for the selected continent, while the buttons can trigger hints, sounds and selections. Python, Flask, JavaScript and Socket.IO connect the digital quiz with the physical components.</p>
+
+          <h4>What I learned</h4>
+          <p>Working in a team of four gave me experience with IoT development, hardware communication, real-time applications and designing for a real-world environment. Combining the map, lighting, sounds, buttons and quiz helped us create a complete interactive installation rather than a traditional web application.</p>
+
+          <h4>Where to find it</h4>
+          <p>The installation is still available to visit during info days at Arteveldehogeschool, near the Fablab at Campus Kantienberg in Ghent.</p>
+          <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <h3><button class="card-open">[Project name]</button></h3>
+        <p>One sentence about what it does.</p>
+        <p class="stack-tags"><span>HTML</span><span>CSS</span><span>JS</span></p>
+        <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
+
+        <!-- Only visible in the popup -->
+        <div class="detail" hidden>
+          <p class="stack-tags"><span>HTML</span><span>CSS</span><span>JS</span></p>
+          <h4>The problem</h4>
+          <p>Why you made this.</p>
+          <h4>My approach</h4>
+          <p>How you built it and which choices you made.</p>
+          <h4>Result</h4>
+          <p>What it delivered and what you learned from it.</p>
+          <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <h3><button class="card-open">[Project name]</button></h3>
+        <p>One sentence about what it does.</p>
+        <p class="stack-tags"><span>HTML</span><span>CSS</span><span>JS</span></p>
+        <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
+
+        <!-- Only visible in the popup -->
+        <div class="detail" hidden>
+          <p class="stack-tags"><span>HTML</span><span>CSS</span><span>JS</span></p>
+          <h4>The problem</h4>
+          <p>Why you made this.</p>
+          <h4>My approach</h4>
+          <p>How you built it and which choices you made.</p>
+          <h4>Result</h4>
+          <p>What it delivered and what you learned from it.</p>
+          <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <h3><button class="card-open">[Project name]</button></h3>
+        <p>One sentence about what it does.</p>
+        <p class="stack-tags"><span>HTML</span><span>CSS</span><span>JS</span></p>
+        <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
+
+        <!-- Only visible in the popup -->
+        <div class="detail" hidden>
+          <p class="stack-tags"><span>HTML</span><span>CSS</span><span>JS</span></p>
+          <h4>The problem</h4>
+          <p>Why you made this.</p>
+          <h4>My approach</h4>
+          <p>How you built it and which choices you made.</p>
+          <h4>Result</h4>
+          <p>What it delivered and what you learned from it.</p>
+          <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="stack">
+    <h2>Stack and skills</h2>
+    <p class="lead">Technical and human, because a good team needs both.</p>
+    <div class="cols">
+      <div><h3>Technical</h3><p class="stack-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>[more]</span></p></div>
+      <div><h3>People</h3><p class="stack-tags"><span>Leadership</span><span>Organising</span><span>Teamwork</span><span>Working independently</span></p></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <h2>Let's get to know each other</h2>
+  <p>A job, internship or collaboration? Send me a message.</p>
+  <p><a href="mailto:your.name@example.com">your.name@example.com</a> &nbsp; <a href="#">GitHub</a> &nbsp; <a href="#">LinkedIn</a></p>
+</div></footer>
+
+<dialog id="modal" class="modal" aria-labelledby="modal-title">
+  <button class="modal-close" aria-label="Close">×</button>
+  <div class="modal-body"></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
