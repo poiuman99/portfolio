@@ -201,7 +201,6 @@
         <h3><button class="card-open">Kina Ghent - Camouflagekaart</button></h3>
         <p>An interactive IoT installation that teaches children about animals through a physical world map and a digital camouflage quiz.</p>
         <p class="stack-tags"><span>Raspberry Pi</span><span>Arduino</span><span>MakeyMakey</span><span>Python</span><span>Flask</span><span>JavaScript</span><span>Socket.IO</span><span>Hardware</span><span>Electronics</span><span>Case development</span></p>
-        <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
 
         <!-- Only visible in the popup -->
         <div class="detail" hidden>
@@ -224,9 +223,38 @@
 
           <h4>Where to find it</h4>
           <p>The installation is still available to visit during info days at Arteveldehogeschool, near the Fablab at Campus Kantienberg in Ghent.</p>
-          <p class="links"><a href="#">Code</a><a href="#">Live</a></p>
         </div>
       </article>
+     <article class="card">
+    <img class="card-img" src="img/exo/exoplaneet.webp" alt="Exoplanet Explorer installation" loading="lazy">
+    <h3><button class="card-open">Exoplanet Explorer - Floraliën</button></h3>
+    <p>An immersive space installation built for the Floraliën in 't Kuipke, where visitors use a physical telescope to discover real, verified exoplanets.</p>
+    <p class="stack-tags"><span>TouchDesigner</span><span>Arduino</span><span>Python</span><span>WebSockets</span><span>Blender</span><span>Hardware</span><span>3D Printing</span></p>
+
+    <!-- Only visible in the popup -->
+    <div class="detail" hidden>
+      <p class="stack-tags"><span>TouchDesigner</span><span>Arduino</span><span>Python</span><span>WebSockets</span><span>Blender</span><span>Hardware</span><span>3D Printing</span></p>
+      <figure>
+      <img src="img/exo/exoplaneet.webp" alt="Exoplanet Explorer setup in 't Kuipke" loading="lazy">
+      <figcaption>The installation in action</figcaption>
+      </figure>
+      
+      <h4>The assignment</h4>
+      <p>As part of Digital Product Studio 2, our team created 'Exoplanet Explorer'—an immersive interactive installation for the Floraliën route ("The ConneXion") in 't Kuipke, Ghent. Located in a fully darkened corridor, our goal was to let visitors experience the search for a new home in space through a physical telescope and digital projection.</p>
+
+      <h4>The concept</h4>
+      <p>Visitors look through a physical telescope to scan a generated star field projected on a large screen. Moving the telescope slides a focus circle across the stars. When targeting a planetary system, visitors use a rotary knob to zoom in smoothly, revealing the exoplanet in detail with its star and surrounding planets in the background. Simultaneously, a touchscreen next to the telescope displays real scientific data—such as size, mass, and gravity—verified by an astronomer from the Volkssterrenwacht Armand Pien. Visitors can even leave a permanent personal flag with their initials on the planet for future explorers.</p>
+
+      <h4>How it's built</h4>
+      <p>I focused heavily on the TouchDesigner environment and technical backbone. I programmed the procedural star field, the real-time detection system tracking the telescope's target, the smooth zoom choreography, and an inactivity reset loop. I also set up the WebSocket bridge connecting the web server and user flags, alongside serial communication linking the telescope's gyroscope and rotary encoder to TouchDesigner. Physically, I designed the screen housing in Blender (built from wooden beams and MDF), 3D printed custom mounts and enclosures for the Arduinos and sensors, and pre-visualized the entire room layout in a 3D virtual model.</p>
+
+      <h4>What I learned</h4>
+      <p>This project was my first time stepping into a technical lead role, where I oversaw the entire system architecture, delegated tasks, and ensured all hardware and software components synchronized seamlessly. Dealing with on-site hardware hurdles—like redesigning gyroscope housings under time pressure, stabilizing the telescope mounting against heavy public use, and solving Arduino overheating issues—taught me invaluable lessons in resilience and physical computing.</p>
+
+      <h4>Where to find it</h4>
+      <p>The installation ran successfully for 10 days during the Floraliën exhibition in 't Kuipke, bringing an unforgettable immersive space experience to life for thousands of visitors.</p>
+    </div>
+  </article>
     </div>
   </section>
 
