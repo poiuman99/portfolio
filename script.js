@@ -52,7 +52,7 @@ themeBtn.addEventListener('click', () => {
 
 /* ---------- 4. Voor de nieuwsgierige developer ---------- */
 console.log('%cHey dev 👋', 'font:700 18px sans-serif;color:#E3A82B',
-  '\nBenieuwd naar de code? Kijk in script.js. Zin om samen iets te bouwen? Stuur me een bericht.');
+  '\nCurious about the code? Take a look at script.js. Want to build something together? Send me a message.');
 
 /* ---------- 5. Project-popup (groeit uit het vakje) ---------- */
 const modal = document.getElementById('modal');
@@ -70,12 +70,13 @@ function fromCardTransform(card) {
 
 function openProject(card) {
   originCard = card;
+  const summary = card.querySelector(':scope > p');   // one-sentence summary from the card
   modalBody.innerHTML =
     `<h3 id="modal-title">${card.querySelector('.card-open').textContent}</h3>` +
+    `<p class="summary">${summary ? summary.textContent : ''}</p>` +
     card.querySelector('.detail').innerHTML;
 
   document.body.classList.add('no-scroll');
-  modal.showModal();
   modal.showModal();
   modal.scrollTop = 0;
   if (reduceMotion.matches) return;

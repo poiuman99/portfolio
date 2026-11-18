@@ -3,22 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mathijs De Langhe | Portfolio</title>
-<meta name="description" content="Portfolio of Mathijs De Langhe: school, work and scouts.">
+<title>Mathijs De Langhe | Interactive Media Developer</title>
+<meta name="description" content="Portfolio of Mathijs De Langhe, an interactive media developer who builds playful installations that mix hardware, software and design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
 </head>
 <body>
 
 <nav class="nav">
   <div class="wrap nav-in">
-    <a class="logo" href="#top">MDL</a>
+    <a class="logo" href="#top" aria-label="Mathijs De Langhe, home"><img src="img/logo.svg" alt="MDL" width="36" height="36"></a>
     <div class="nav-links">
-      <a href="#traject">Journey</a>
       <a href="#projecten">Projects</a>
-      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+      <a href="#traject">Experience</a>
       <a href="#contact">Contact</a>
       <button id="theme" aria-label="Switch between light and dark theme">◐</button>
     </div>
@@ -29,7 +30,9 @@
   <div class="wrap hero-in">
     <div>
       <h1>Mathijs De Langhe</h1>
-      <p>Student, employee and scout leader. I'm sociable and I love making things, from camp games to websites, and I learn quickly.</p>
+      <p class="tagline">I build installations you can touch, play with and remember.</p>
+      <p>Interactive media developer in training, mixing hardware, code and design. Studios and agencies that make exhibitions and playful experiences: let's talk about an internship or a project.</p>
+      <p class="hero-cta"><a class="btn" href="#projecten">See what I've built</a></p>
     </div>
 
     <!-- Click a line: the timeline filters on that category -->
@@ -49,8 +52,133 @@
 
 <main class="wrap">
 
+  <section id="projecten">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+    <img class="card-img" src="img/exo/exoplaneet.webp" alt="Exoplanet Explorer installation" loading="lazy">
+    <h3><button class="card-open">Exoplanet Explorer - Floraliën</button></h3>
+    <p>An immersive space installation built for the Floraliën in 't Kuipke, where visitors use a physical telescope to discover real, verified exoplanets.</p>
+    <p class="stack-tags"><span>TouchDesigner</span><span>Arduino</span><span>Python</span><span>WebSockets</span><span>Blender</span><span>Hardware</span><span>3D Printing</span></p>
+
+    <!-- Only visible in the popup -->
+    <div class="detail" hidden>
+    <p class="case-meta">Team project &middot; <strong>My role:</strong> technical lead (TouchDesigner system, hardware and 3D design) &middot; Ran 10 days at the Floraliën</p>
+      <p class="stack-tags"><span>TouchDesigner</span><span>Arduino</span><span>Python</span><span>WebSockets</span><span>Blender</span><span>Hardware</span><span>3D Printing</span></p>
+      <figure>
+      <img src="img/exo/exoplaneet.webp" alt="Exoplanet Explorer setup in 't Kuipke" loading="lazy">
+      <figcaption>The installation in action</figcaption>
+      </figure>
+      
+      <h4>The assignment</h4>
+      <p>Our team created 'Exoplanet Explorer'—an immersive interactive installation for the Floraliën route ("The ConneXion") in 't Kuipke, Ghent. Located in a fully darkened corridor, our goal was to let visitors experience the search for a new home in space through a physical telescope and digital projection.</p>
+
+      <h4>The concept</h4>
+      <p>Visitors look through a physical telescope to scan a generated star field projected on a large screen. Moving the telescope slides a focus circle across the stars. When targeting a planetary system, visitors use a rotary knob to zoom in smoothly, revealing the exoplanet in detail with its star and surrounding planets in the background. Simultaneously, a touchscreen next to the telescope displays real scientific data—such as size, mass, and gravity—verified by an astronomer from the Volkssterrenwacht Armand Pien. Visitors can even leave a permanent personal flag with their initials on the planet for future explorers.</p>
+
+      <h4>How it's built</h4>
+      <p>I focused heavily on the TouchDesigner environment and technical backbone. I programmed the procedural star field, the real-time detection system tracking the telescope's target, the smooth zoom choreography, and an inactivity reset loop. I also set up the WebSocket bridge connecting the web server and user flags, alongside serial communication linking the telescope's gyroscope and rotary encoder to TouchDesigner. Physically, I designed the screen housing in Blender (built from wooden beams and MDF), 3D printed custom mounts and enclosures for the Arduinos and sensors, and pre-visualized the entire room layout in a 3D virtual model.</p>
+
+      <h4>What I learned</h4>
+      <p>This project was my first time stepping into a technical lead role, where I oversaw the entire system architecture, delegated tasks, and ensured all hardware and software components synchronized seamlessly. Dealing with on-site hardware hurdles—like redesigning gyroscope housings under time pressure, stabilizing the telescope mounting against heavy public use, and solving Arduino overheating issues—taught me invaluable lessons in resilience and physical computing.</p>
+
+      <h4>Where to find it</h4>
+      <p>The installation ran successfully for 10 days during the Floraliën exhibition in 't Kuipke, bringing an unforgettable immersive space experience to life for thousands of visitors.</p>
+    </div>
+  </article>
+      <article class="card">
+        <img class="card-img" src="img/kina/wintercircus-1-camouflagekaart.png" alt="" loading="lazy">
+        <h3><button class="card-open">Kina Ghent - Camouflagekaart</button></h3>
+        <p>An interactive IoT installation that teaches children about animals through a physical world map and a digital camouflage quiz.</p>
+        <p class="stack-tags"><span>Raspberry Pi</span><span>Arduino</span><span>MakeyMakey</span><span>Python</span><span>Flask</span><span>JavaScript</span><span>Socket.IO</span><span>Hardware</span><span>Electronics</span><span>Case development</span></p>
+
+        <!-- Only visible in the popup -->
+        <div class="detail" hidden>
+    <p class="case-meta">Team of 4 &middot; <strong>My role:</strong> data researcher and analyst, with a major contribution to the construction</p>
+          <p class="stack-tags"><span>Raspberry Pi</span><span>Arduino</span><span>MakeyMakey</span><span>Python</span><span>Flask</span><span>JavaScript</span><span>Socket.IO</span><span>Hardware</span><span>Electronics</span><span>Case development</span></p>
+          <figure>
+          <img src="img/kina/wintercircus-1-camouflagekaart.png" alt="A picture of the camouflagekaart in the Wintercircus" loading="lazy">
+          <figcaption>The installation</figcaption>
+          </figure>
+          <h4>The assignment</h4>
+          <p>Together with three other students, I created an interactive IoT installation inspired by Kina, the natural history museum in Ghent. Our goal was to design an engaging way for children to learn more about the animals and subjects featured in the museum.</p>
+
+          <h4>The concept</h4>
+          <p>We combined a physical world map with a digital quiz shown on a screen. Players first search an image for a camouflaged animal and then answer a multiple-choice question to identify what they found. By selecting different continents on the physical installation, they can discover animals from different parts of the world.</p>
+
+          <h4>How it's built</h4>
+          <p>A Raspberry Pi runs the application and communicates with an Arduino that controls the LED strips and physical buttons. A MakeyMakey enables joystick navigation and continent selection. The LEDs provide visual feedback for the selected continent, while the buttons can trigger hints, sounds and selections. Python, Flask, JavaScript and Socket.IO connect the digital quiz with the physical components.</p>
+
+          <h4>What I learned</h4>
+          <p>Working in a team of four gave me experience with IoT development, hardware communication, real-time applications and designing for a real-world environment. Combining the map, lighting, sounds, buttons and quiz helped us create a complete interactive installation rather than a traditional web application.</p>
+
+          <h4>Where to find it</h4>
+          <p>The installation is still available to visit during info days at Arteveldehogeschool, near the Fablab at Campus Kantienberg in Ghent.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img class="card-img" src="img/speed/speed-challenge-1.png" alt="" loading="lazy">
+  <h3><button class="card-open">Speed Challenge</button></h3>
+  <p>An interactive running installation with two pillars, a timer, a high score and a printed ticket.</p>
+  <p class="stack-tags"><span>Raspberry Pi</span><span>ESP32-C3</span><span>C++</span><span>Python</span></p>
+
+  <!-- Only visible in the popup -->
+  <div class="detail" hidden>
+    <p class="case-meta">Team of 3 &middot; <strong>My role:</strong> developing the concept and helping bring it to life together with my team</p>
+    <p class="stack-tags"><span>Raspberry Pi</span><span>ESP32-C3</span><span>C++</span><span>Python</span><span>Socket.IO</span></p>
+
+    <div class="gallery">
+  <figure>
+    <img src="img/speed/speed-challenge-1.png" alt="The Speed Challenge start and finish pillars placed side by side" loading="lazy">
+    <figcaption>The start and finish pillars</figcaption>
+  </figure>
+  <figure>
+    <img src="img/speed/lasercut-speed-challenge.png" alt="Plywood panels on a laser cutter, engraved with runners and laurel branches" loading="lazy">
+    <figcaption>Process: laser-cutting the pillar panels</figcaption>
+  </figure>
+  </div>
+
+    <h4>The assignment</h4>
+    <p>Together with two other students, I explored how a complete experience loop works and what matters when designing an interactive installation. Our goal was to design and build a prototype that covers every stage of that loop: attract, entry, engage, exit and extend.</p>
+
+    <h4>The concept</h4>
+    <p>We created the Speed Challenge, an interactive running experience built around two physical pillars that can be placed in different environments. One pillar is the start and the other is the finish. Each has a physical button: players start the challenge at the first pillar and stop the timer at the second, as fast as they can.</p>
+    <p>At the finish pillar, players see their final time and compare it with the current high score. This competitive element invites them to try again and beat their own result. A screen and sound feedback make the experience feel responsive and engaging.</p>
+
+    <h4>Extending the experience</h4>
+    <p>To take the experience beyond the installation itself, we built a ticket printer into the finish pillar. It prints a physical ticket with the player's final time and a fun fact about athletics, giving them something tangible to take home.</p>
+
+    <h4>How it's built</h4>
+    <ul>
+      <li>A Raspberry Pi and two ESP32-C3 controllers</li>
+      <li>Arcade buttons, a timer, an LCD screen and a piezo speaker</li>
+      <li>A ticket printer inside the finish pillar</li>
+      <li>C++ and Python, with Socket.IO handling real-time communication between the components</li>
+    </ul>
+
+    <h4>What I learned</h4>
+    <p>This project showed me how important the complete experience loop is. Instead of focusing only on the interaction itself, we designed the whole experience: attracting people, getting them started, keeping them engaged, giving a clear ending, and offering a reason to remember it afterwards.</p>
+
+  </div>
+</article>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p class="mission">I build playful, physical experiences that make people curious and bring them together.</p>
+    <div class="about">
+      <div>
+        <p>I'd rather make something than talk about it. For years that meant inventing games for a group of kids at scouts camp. Now it means building installations where a button, a screen and a bit of code turn visitors into players.</p>
+        <p>My scouts totem is "Bonvivante Bee": a hard worker who is always busy, learns by watching and doing, and does it for the people around. That's how I like to work. I take the technical lead when a team needs one, and I'm just as happy behind the bar or leading a scouts group, keeping things running for others.</p>
+        <p>Right now I'm looking for an internship where I can build interactive experiences for a real audience.</p>
+      </div> 
+      <img class="about-photo" src="img/mathijs.jpg" alt="Portrait of Mathijs De Langhe" width="400" height="500">
+    </div>
+  </section>
+
   <section id="traject">
-    <h2>My journey</h2>
+    <h2>Experience</h2>
     <p class="lead">School, work and scouts on one line. Scroll to follow the path, or filter.</p>
     <div class="tabs" role="group" aria-label="Filter">
       <button aria-pressed="true" data-f="all">All</button>
@@ -73,8 +201,7 @@
         <h3>Interactive Media Development</h3>
         <div class="when">Artevelde University of Applied Sciences &middot; 2024 – now</div>
         <p>Interactive Media Development -> I chose this programme because computers have always fascinated me.</p>
-        <p>Project or final work you're proud of:</p>
-        <ul><li>Project or final work you're proud of</li><li>Subject you're good at</li></ul>
+        <p>Here I build interactive installations that combine hardware, software and design. See the results under <a href="#projecten">Projects</a>.</p>
       </li>
       <li class="item" data-cat="werk">
         <span class="tag">Work</span>
@@ -153,125 +280,20 @@
     </ol>
   </section>
 
-  <section id="projecten">
-    <h2>Projects</h2>
-    <div class="grid">
-      <article class="card">
-        <img class="card-img" src="img/speed/speed-challenge-1.png" alt="" loading="lazy">
-  <h3><button class="card-open">Speed Challenge</button></h3>
-  <p>An interactive running installation with two pillars, a timer, a high score and a printed ticket.</p>
-  <p class="stack-tags"><span>Raspberry Pi</span><span>ESP32-C3</span><span>C++</span><span>Python</span></p>
-
-  <!-- Only visible in the popup -->
-  <div class="detail" hidden>
-    <p class="stack-tags"><span>Raspberry Pi</span><span>ESP32-C3</span><span>C++</span><span>Python</span><span>Socket.IO</span></p>
-
-    <div class="gallery">
-  <figure>
-    <img src="img/speed/speed-challenge-1.png" alt="The Speed Challenge start and finish pillars placed side by side" loading="lazy">
-    <figcaption>The start and finish pillars</figcaption>
-  </figure>
-  </div>
-
-    <h4>The assignment</h4>
-    <p>Together with two other students, I explored how a complete experience loop works and what matters when designing an interactive installation. Our goal was to design and build a prototype that covers every stage of that loop: attract, entry, engage, exit and extend.</p>
-
-    <h4>The concept</h4>
-    <p>We created the Speed Challenge, an interactive running experience built around two physical pillars that can be placed in different environments. One pillar is the start and the other is the finish. Each has a physical button: players start the challenge at the first pillar and stop the timer at the second, as fast as they can.</p>
-    <p>At the finish pillar, players see their final time and compare it with the current high score. This competitive element invites them to try again and beat their own result. A screen and sound feedback make the experience feel responsive and engaging.</p>
-
-    <h4>Extending the experience</h4>
-    <p>To take the experience beyond the installation itself, we built a ticket printer into the finish pillar. It prints a physical ticket with the player's final time and a fun fact about athletics, giving them something tangible to take home.</p>
-
-    <h4>How it's built</h4>
-    <ul>
-      <li>A Raspberry Pi and two ESP32-C3 controllers</li>
-      <li>Arcade buttons, a timer, an LCD screen and a piezo speaker</li>
-      <li>A ticket printer inside the finish pillar</li>
-      <li>C++ and Python, with Socket.IO handling real-time communication between the components</li>
-    </ul>
-
-    <h4>What I learned</h4>
-    <p>This project showed me how important the complete experience loop is. Instead of focusing only on the interaction itself, we designed the whole experience: attracting people, getting them started, keeping them engaged, giving a clear ending, and offering a reason to remember it afterwards.</p>
-
-  </div>
-</article>
-      <article class="card">
-        <img class="card-img" src="img/kina/wintercircus-1-camouflagekaart.png" alt="" loading="lazy">
-        <h3><button class="card-open">Kina Ghent - Camouflagekaart</button></h3>
-        <p>An interactive IoT installation that teaches children about animals through a physical world map and a digital camouflage quiz.</p>
-        <p class="stack-tags"><span>Raspberry Pi</span><span>Arduino</span><span>MakeyMakey</span><span>Python</span><span>Flask</span><span>JavaScript</span><span>Socket.IO</span><span>Hardware</span><span>Electronics</span><span>Case development</span></p>
-
-        <!-- Only visible in the popup -->
-        <div class="detail" hidden>
-          <p class="stack-tags"><span>Raspberry Pi</span><span>Arduino</span><span>MakeyMakey</span><span>Python</span><span>Flask</span><span>JavaScript</span><span>Socket.IO</span><span>Hardware</span><span>Electronics</span><span>Case development</span></p>
-          <figure>
-          <img src="img/kina/wintercircus-1-camouflagekaart.png" alt="A picture of the camouflagekaart in the Wintercircus" loading="lazy">
-          <figcaption>The installation</figcaption>
-          </figure>
-          <h4>The assignment</h4>
-          <p>Together with three other students, I created an interactive IoT installation inspired by Kina, the natural history museum in Ghent. Our goal was to design an engaging way for children to learn more about the animals and subjects featured in the museum.</p>
-
-          <h4>The concept</h4>
-          <p>We combined a physical world map with a digital quiz shown on a screen. Players first search an image for a camouflaged animal and then answer a multiple-choice question to identify what they found. By selecting different continents on the physical installation, they can discover animals from different parts of the world.</p>
-
-          <h4>How it's built</h4>
-          <p>A Raspberry Pi runs the application and communicates with an Arduino that controls the LED strips and physical buttons. A MakeyMakey enables joystick navigation and continent selection. The LEDs provide visual feedback for the selected continent, while the buttons can trigger hints, sounds and selections. Python, Flask, JavaScript and Socket.IO connect the digital quiz with the physical components.</p>
-
-          <h4>What I learned</h4>
-          <p>Working in a team of four gave me experience with IoT development, hardware communication, real-time applications and designing for a real-world environment. Combining the map, lighting, sounds, buttons and quiz helped us create a complete interactive installation rather than a traditional web application.</p>
-
-          <h4>Where to find it</h4>
-          <p>The installation is still available to visit during info days at Arteveldehogeschool, near the Fablab at Campus Kantienberg in Ghent.</p>
-        </div>
-      </article>
-     <article class="card">
-    <img class="card-img" src="img/exo/exoplaneet.webp" alt="Exoplanet Explorer installation" loading="lazy">
-    <h3><button class="card-open">Exoplanet Explorer - Floraliën</button></h3>
-    <p>An immersive space installation built for the Floraliën in 't Kuipke, where visitors use a physical telescope to discover real, verified exoplanets.</p>
-    <p class="stack-tags"><span>TouchDesigner</span><span>Arduino</span><span>Python</span><span>WebSockets</span><span>Blender</span><span>Hardware</span><span>3D Printing</span></p>
-
-    <!-- Only visible in the popup -->
-    <div class="detail" hidden>
-      <p class="stack-tags"><span>TouchDesigner</span><span>Arduino</span><span>Python</span><span>WebSockets</span><span>Blender</span><span>Hardware</span><span>3D Printing</span></p>
-      <figure>
-      <img src="img/exo/exoplaneet.webp" alt="Exoplanet Explorer setup in 't Kuipke" loading="lazy">
-      <figcaption>The installation in action</figcaption>
-      </figure>
-      
-      <h4>The assignment</h4>
-      <p>As part of Digital Product Studio 2, our team created 'Exoplanet Explorer'—an immersive interactive installation for the Floraliën route ("The ConneXion") in 't Kuipke, Ghent. Located in a fully darkened corridor, our goal was to let visitors experience the search for a new home in space through a physical telescope and digital projection.</p>
-
-      <h4>The concept</h4>
-      <p>Visitors look through a physical telescope to scan a generated star field projected on a large screen. Moving the telescope slides a focus circle across the stars. When targeting a planetary system, visitors use a rotary knob to zoom in smoothly, revealing the exoplanet in detail with its star and surrounding planets in the background. Simultaneously, a touchscreen next to the telescope displays real scientific data—such as size, mass, and gravity—verified by an astronomer from the Volkssterrenwacht Armand Pien. Visitors can even leave a permanent personal flag with their initials on the planet for future explorers.</p>
-
-      <h4>How it's built</h4>
-      <p>I focused heavily on the TouchDesigner environment and technical backbone. I programmed the procedural star field, the real-time detection system tracking the telescope's target, the smooth zoom choreography, and an inactivity reset loop. I also set up the WebSocket bridge connecting the web server and user flags, alongside serial communication linking the telescope's gyroscope and rotary encoder to TouchDesigner. Physically, I designed the screen housing in Blender (built from wooden beams and MDF), 3D printed custom mounts and enclosures for the Arduinos and sensors, and pre-visualized the entire room layout in a 3D virtual model.</p>
-
-      <h4>What I learned</h4>
-      <p>This project was my first time stepping into a technical lead role, where I oversaw the entire system architecture, delegated tasks, and ensured all hardware and software components synchronized seamlessly. Dealing with on-site hardware hurdles—like redesigning gyroscope housings under time pressure, stabilizing the telescope mounting against heavy public use, and solving Arduino overheating issues—taught me invaluable lessons in resilience and physical computing.</p>
-
-      <h4>Where to find it</h4>
-      <p>The installation ran successfully for 10 days during the Floraliën exhibition in 't Kuipke, bringing an unforgettable immersive space experience to life for thousands of visitors.</p>
-    </div>
-  </article>
-    </div>
-  </section>
-
   <section id="stack">
     <h2>Stack and skills</h2>
     <p class="lead">Technical and human, because a good team needs both.</p>
     <div class="cols">
-      <div><h3>Technical</h3><p class="stack-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>[more]</span></p></div>
+      <div><h3>Technical</h3><p class="stack-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>C++</span><span>Arduino</span><span>Raspberry Pi</span><span>TouchDesigner</span><span>Blender</span><span>Git</span></p></div>
       <div><h3>People</h3><p class="stack-tags"><span>Leadership</span><span>Organising</span><span>Teamwork</span><span>Working independently</span></p></div>
     </div>
   </section>
 </main>
 
 <footer id="contact"><div class="wrap">
-  <h2>Let's get to know each other</h2>
-  <p>A job, internship or collaboration? Send me a message.</p>
-  <p><a href="mailto:mathijs.dl99@gmail.com">mathijs.dl99@gmail.com</a> &nbsp; <a href="https://github.com/poiuman99">GitHub</a> &nbsp; <a href="www.linkedin.com/in/mathijs-de-langhe-82a0a640b">LinkedIn</a></p>
+  <h2>Let's build something together</h2>
+  <p>I'm looking for an internship, and I'm open to freelance work and collaborations on installations and interactive experiences. Send me a message and I'll get back to you.</p>
+  <p><a href="mailto:mathijs.dl99@gmail.com">mathijs.dl99@gmail.com</a> &nbsp; <a href="https://github.com/poiuman99">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/mathijs-de-langhe-82a0a640b">LinkedIn</a></p>
 </div></footer>
 
 <dialog id="modal" class="modal" aria-labelledby="modal-title">

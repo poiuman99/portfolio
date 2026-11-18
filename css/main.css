@@ -135,3 +135,24 @@ body.no-scroll{overflow:hidden}
 
 .card-img{display:block;width:calc(100% + 44px);aspect-ratio:16/10;object-fit:cover;
   margin:-20px -22px 16px;border-radius:2px 2px 0 0}
+
+/* ---------- Portfolio checklist additions ---------- */
+.logo{display:flex}.logo img{display:block;width:36px;height:36px}
+.hero .tagline{font:800 clamp(24px,4vw,36px)/1.15 var(--head);color:var(--flag);margin:18px 0 0}
+.hero .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;font:700 16px var(--head);padding:12px 22px;border-radius:999px;background:var(--flag);
+  color:#18241D;text-decoration:none;border:2px solid var(--flag);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--forest-ink);border-color:#4b6a58}
+.btn-ghost:hover{border-color:var(--forest-ink)}
+.mission{font:800 clamp(24px,3.6vw,34px)/1.2 var(--head);letter-spacing:-.02em;max-width:24em;margin:0 0 26px}
+.about{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
+.about p{margin:0 0 14px;max-width:62ch}
+.about-photo{display:block;width:260px;height:auto;border-radius:6px;border:1px solid var(--line)}
+@media (max-width:720px){.about{grid-template-columns:1fr}.about-photo{width:100%;max-width:320px}}
+.case-meta{font:500 15px var(--head);color:var(--muted);margin:0 0 18px}
+.modal-body .summary{font-size:22px;line-height:1.4;color:var(--ink);margin:0 0 14px}
+/* mobile: keep the navigation links visible */
+@media (max-width:620px){.nav-links a{display:inline}.nav-links{gap:12px;font-size:14px}}
+@media (max-width:420px){.nav-links{gap:9px;font-size:13px}#theme{width:30px;height:30px}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
